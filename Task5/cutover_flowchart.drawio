@@ -1,0 +1,132 @@
+<mxfile host="Electron">
+  <diagram id="cutover" name="Cutover-план (Parallel run)">
+    <mxGraphModel dx="860" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1020" pageHeight="1700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t0" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=light-dark(#FFFFFF,#FFFFFF);" value="Cutover-план (Parallel run): этапы, ворота Go/No-Go и ветка отката" vertex="1">
+          <mxGeometry height="26" width="900" x="60" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#CFE2F3;strokeColor=#6FA8DC;fontColor=#1A1A1A;fontSize=12;fontStyle=1;" value="Старт миграции" vertex="1">
+          <mxGeometry height="46" width="160" x="350" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Подготовка: инвентаризация, окружения (K8s), ETL с очисткой, механизм сверки, наблюдаемость" vertex="1">
+          <mxGeometry height="70" width="260" x="300" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Тестирование: функц. / интеграц. / нагрузочное (×5) / ИБ" vertex="1">
+          <mxGeometry height="64" width="260" x="300" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#1A1A1A;fontSize=11;" value="Тесты пройдены?" vertex="1">
+          <mxGeometry height="100" width="200" x="330" y="336" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Параллельный запуск (shadow): legacy = источник истины, ежедневная сверка результатов" vertex="1">
+          <mxGeometry height="76" width="260" x="300" y="476" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#1A1A1A;fontSize=11;" value="Сверка чистая N дней?" vertex="1">
+          <mxGeometry height="100" width="200" x="330" y="596" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Постепенный перевод нагрузки: canary по процессам/филиалам, feature flags" vertex="1">
+          <mxGeometry height="70" width="260" x="300" y="736" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#1A1A1A;fontSize=11;" value="Go / No-Go перед полным cutover" vertex="1">
+          <mxGeometry height="104" width="200" x="330" y="836" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Полный cutover: финальная дельта данных, переключение трафика, legacy → standby" vertex="1">
+          <mxGeometry height="76" width="260" x="300" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#1A1A1A;fontSize=11;" value="Cutover успешен? (smoke + перф)" vertex="1">
+          <mxGeometry height="104" width="200" x="330" y="1086" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Hypercare: усиленный мониторинг, ежедневная сверка, дежурство (on-call)" vertex="1">
+          <mxGeometry height="70" width="260" x="300" y="1230" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#1A1A1A;fontSize=11;" value="Стабильно?" vertex="1">
+          <mxGeometry height="100" width="200" x="330" y="1330" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#1A1A1A;fontSize=11;" value="Декомиссия легаси: архив (шифр., РФ), вывод 1С и файлов, документация" vertex="1">
+          <mxGeometry height="70" width="260" x="300" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fillColor=#CFE2F3;strokeColor=#6FA8DC;fontColor=#1A1A1A;fontSize=12;fontStyle=1;" value="Миграция завершена" vertex="1">
+          <mxGeometry height="46" width="160" x="350" y="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FCE5CD;strokeColor=#E69138;fontColor=#1A1A1A;fontSize=11;" value="Доработка и повторный прогон тестов → возврат к тестированию" vertex="1">
+          <mxGeometry height="72" width="250" x="700" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FCE5CD;strokeColor=#E69138;fontColor=#1A1A1A;fontSize=11;" value="Устранение расхождений данных, повтор сверки → возврат к параллельному запуску" vertex="1">
+          <mxGeometry height="72" width="250" x="700" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FCE5CD;strokeColor=#E69138;fontColor=#1A1A1A;fontSize=11;" value="Стоп: доработка слайса; полный cutover не выполняется" vertex="1">
+          <mxGeometry height="72" width="250" x="700" y="856" as="geometry" />
+        </mxCell>
+        <mxCell id="n18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#F8CECC;strokeColor=#B85450;fontColor=#1A1A1A;fontSize=11;fontStyle=1;" value="ROLLBACK: переключение трафика на legacy (standby); разбор инцидента; повторная попытка" vertex="1">
+          <mxGeometry height="80" width="250" x="700" y="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="n19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#FCE5CD;strokeColor=#E69138;fontColor=#1A1A1A;fontSize=11;" value="Hotfix в проде; продолжение hypercare" vertex="1">
+          <mxGeometry height="72" width="250" x="700" y="1344" as="geometry" />
+        </mxCell>
+        <mxCell id="n20" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;fontColor=light-dark(#FFFFFF,#FFFFFF);" target="n2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n21" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;fontColor=light-dark(#FFFFFF,#FFFFFF);" target="n3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n22" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=light-dark(#FFFFFF,#FFFFFF);strokeColor=#444444;fontColor=light-dark(#FFFFFF,#FFFFFF);" target="n4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n23" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;fontColor=light-dark(#FFFFFF,#FFFFFF);" target="n5" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Да&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n24" edge="1" parent="1" source="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n25" edge="1" parent="1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;fontColor=light-dark(#FFFFFF,#FFFFFF);" target="n7" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Да&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n26" edge="1" parent="1" source="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n27" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n9" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Да&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n28" edge="1" parent="1" source="n9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n10" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n29" edge="1" parent="1" source="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n11" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Да&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n30" edge="1" parent="1" source="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n12" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n31" edge="1" parent="1" source="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n13" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Да&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n32" edge="1" parent="1" source="n13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n14" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n33" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n15" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Нет&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n34" edge="1" parent="1" source="n6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;fontColor=light-dark(#FFFFFF,#FFFFFF);" target="n16" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Нет&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n35" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n17" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Нет&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n36" edge="1" parent="1" source="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n18" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Нет&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0033" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n37" edge="1" parent="1" source="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=10;labelBackgroundColor=#FFFFFF;strokeColor=#444444;" target="n19" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;Нет&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
