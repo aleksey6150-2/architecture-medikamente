@@ -1,0 +1,223 @@
+<mxfile host="Electron">
+  <diagram id="c2" name="C2 — движок классификации данных">
+    <mxGraphModel dx="1605" dy="1077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1880" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B_eng" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;dashed=1;verticalAlign=top;align=left;fontSize=12;fontStyle=2;spacingTop=6;spacingLeft=8;strokeColor=#1B5E20;fontColor=#1B5E20;" value="Движок классификации данных" vertex="1">
+          <mxGeometry height="510" width="1020" x="280" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="B_wh" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;dashed=1;verticalAlign=top;align=left;fontSize=12;fontStyle=2;spacingTop=6;spacingLeft=8;strokeColor=#5E35B1;fontColor=#5E35B1;" value="Аналитическое хранилище данных (слои + меры)" vertex="1">
+          <mxGeometry height="500" width="240" x="1320" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="B_pf" parent="1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;dashed=1;verticalAlign=top;align=left;fontSize=12;fontStyle=2;spacingTop=6;spacingLeft=8;strokeColor=#1B5E20;fontColor=#1B5E20;" value="Платформенные сервисы Privacy by Design" vertex="1">
+          <mxGeometry height="120" width="1280" x="280" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="s_op" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#8C8496;strokeColor=#736B80;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Операционная БД&lt;/b&gt;&lt;br&gt;[Внешн. источник]&lt;br&gt;&lt;br&gt;выгрузка" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="s_xls" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#8C8496;strokeColor=#736B80;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Excel / файлы&lt;/b&gt;&lt;br&gt;[Внешн. источник]" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="s_1c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#8C8496;strokeColor=#736B80;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Выгрузки 1С&lt;/b&gt;&lt;br&gt;[Внешн. источник]" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="s_lab" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#8C8496;strokeColor=#736B80;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Результаты лаборатории&lt;/b&gt;&lt;br&gt;[Внешн. источник]" vertex="1">
+          <mxGeometry height="80" width="200" x="40" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="a_an" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Аналитик / Data Scientist&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;BI / ML на обезличенных" vertex="1">
+          <mxGeometry height="96" width="200" x="1600" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a_dpo" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;DPO / стюард данных&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;ревью карантина, политики" vertex="1">
+          <mxGeometry height="96" width="200" x="1600" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e_orc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Оркестратор пакетной загрузки&lt;/b&gt;&lt;br&gt;[Container: Airflow/Argo]&lt;br&gt;&lt;br&gt;расписание и этапы" vertex="1">
+          <mxGeometry height="90" width="210" x="300" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ing" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Сервис приёма (Ingestion)&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;приём батча" vertex="1">
+          <mxGeometry height="88" width="210" x="300" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="d_land" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Landing / Карантин&lt;/b&gt;&lt;br&gt;[Datastore]&lt;br&gt;&lt;br&gt;сырой слой, Restricted by default" vertex="1">
+          <mxGeometry height="110" width="210" x="300" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="e_prof" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Профайлер схемы + детектор дрейфа&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;типы, паттерны, изменения схемы" vertex="1">
+          <mxGeometry height="100" width="210" x="560" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="d_sch" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Реестр схем&lt;/b&gt;&lt;br&gt;[Datastore]&lt;br&gt;&lt;br&gt;версионирование, дрейф" vertex="1">
+          <mxGeometry height="90" width="210" x="560" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cls" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Движок классификации (ядро)&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;присвоение класса + уверенность" vertex="1">
+          <mxGeometry height="90" width="210" x="820" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rule" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Сервис правил и словарей&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;regex: ИНН/СНИЛС/паспорт; МКБ" vertex="1">
+          <mxGeometry height="90" width="210" x="820" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ml" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;ML-сервис классификации&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;NER + классификатор столбцов" vertex="1">
+          <mxGeometry height="90" width="210" x="820" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="d_mdl" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Реестр моделей&lt;/b&gt;&lt;br&gt;[Datastore]&lt;br&gt;&lt;br&gt;версии моделей" vertex="1">
+          <mxGeometry height="100" width="210" x="820" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="e_deid" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Сервис обезличивания / маскирования&lt;/b&gt;&lt;br&gt;[Container: pg-anon]&lt;br&gt;&lt;br&gt;токенизация, маскирование" vertex="1">
+          <mxGeometry height="100" width="210" x="1080" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e_qc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Контроль качества и порогов&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;quality gate, покрытие" vertex="1">
+          <mxGeometry height="90" width="210" x="1080" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="e_rev" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#438DD5;strokeColor=#3C7FC0;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Сервис ревью карантина&lt;/b&gt;&lt;br&gt;[Container: UI]&lt;br&gt;&lt;br&gt;разметка низкоуверенных" vertex="1">
+          <mxGeometry height="90" width="210" x="1080" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="w_br" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#7E57C2;strokeColor=#5E35B1;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Bronze — сырые + теги&lt;/b&gt;&lt;br&gt;[Datastore]&lt;br&gt;&lt;br&gt;классифицированные сырые" vertex="1">
+          <mxGeometry height="90" width="210" x="1340" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="w_sl" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#7E57C2;strokeColor=#5E35B1;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Silver — очищенные + обезличенные&lt;/b&gt;&lt;br&gt;[Datastore: ClickHouse]&lt;br&gt;&lt;br&gt;основной аналитический слой" vertex="1">
+          <mxGeometry height="90" width="210" x="1340" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="w_gd" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#7E57C2;strokeColor=#5E35B1;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Gold — агрегаты / витрины&lt;/b&gt;&lt;br&gt;[Datastore]&lt;br&gt;&lt;br&gt;анонимизированные (k-аноним.)" vertex="1">
+          <mxGeometry height="90" width="210" x="1340" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="w_rs" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#C0392B;strokeColor=#922B21;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Restricted-слой&lt;/b&gt;&lt;br&gt;[Datastore]&lt;br&gt;&lt;br&gt;конфиденц.: field-шифр. + ABAC" vertex="1">
+          <mxGeometry height="100" width="210" x="1340" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="p_cat" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#2E7D32;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Каталог + Lineage + Теги&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;классы, происхождение, RoPA" vertex="1">
+          <mxGeometry height="84" width="210" x="300" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="p_vlt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#2E7D32;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Vault / KMS&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;ключи, токенизация" vertex="1">
+          <mxGeometry height="84" width="210" x="560" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="p_opa" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#2E7D32;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;OPA (ABAC)&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;доступ по тегам" vertex="1">
+          <mxGeometry height="84" width="210" x="820" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="p_aud" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#2E7D32;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;Аудит и мониторинг&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;логи доступа, алертинг" vertex="1">
+          <mxGeometry height="84" width="210" x="1080" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="p_dlp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#2E7D32;strokeColor=#1B5E20;fontColor=#FFFFFF;fontSize=11;verticalAlign=middle;" value="&lt;b&gt;DLP&lt;/b&gt;&lt;br&gt;[Container]&lt;br&gt;&lt;br&gt;контроль выгрузок" vertex="1">
+          <mxGeometry height="84" width="210" x="1340" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="f_s_op" edge="1" parent="1" source="s_op" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_ing" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 127, 255), rgb(18, 18, 18));&quot;&gt;батч&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0025" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_s_xls" edge="1" parent="1" source="s_xls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_ing" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;батч&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_s_1c" edge="1" parent="1" source="s_1c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_ing" value="батч">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_s_lab" edge="1" parent="1" source="s_lab" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_ing" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;батч&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0013" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="e_ing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="d_land" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;сырые данные (шифр.)&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0148" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="d_land" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_prof" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;чтение&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="e_prof" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_cls" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;профиль + схема&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="e_cls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_deid" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;класс → правило обезличивания&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="1" source="e_deid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_qc" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;обезличенные / маскированные&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" edge="1" parent="1" source="e_qc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="w_br" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 102, 255), rgb(18, 18, 18));&quot;&gt;загрузка (теги классификации)&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7" edge="1" parent="1" source="w_br" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="w_sl" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;очистка + обезличивание (по тегам)&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8" edge="1" parent="1" source="w_sl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="w_gd" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 102, 255), rgb(18, 18, 18));&quot;&gt;агрегация + анонимизация&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" edge="1" parent="1" source="e_deid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="w_rs" value="&lt;span style=&quot;background-color: light-dark(rgb(51, 51, 255), rgb(18, 18, 18));&quot;&gt;конфиденц. (field-шифр.)&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f10" edge="1" parent="1" source="w_sl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="a_an" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;обезличенные данные [ABAC]&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f11" edge="1" parent="1" source="w_gd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="a_an" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;витрины [ABAC]&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0008" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1" edge="1" parent="1" source="e_orc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="e_ing" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;оркестрация всех этапов&lt;/span&gt;">
+          <mxGeometry relative="1" x="0.0115" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c2" edge="1" parent="1" source="e_orc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="e_cls" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" edge="1" parent="1" source="e_prof" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="d_sch" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;версии схем, дрейф&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" edge="1" parent="1" source="e_cls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="e_rule" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;паттерны / словари&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" edge="1" parent="1" source="e_cls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="e_ml" value="&lt;span style=&quot;background-color: light-dark(rgb(153, 204, 255), rgb(18, 18, 18));&quot;&gt;скоринг столбцов&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0667" y="-35" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c6" edge="1" parent="1" source="e_ml" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="d_mdl" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;модель&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c7" edge="1" parent="1" source="e_cls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_cat" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 102, 255), rgb(102, 102, 255));&quot;&gt;запись классов/тегов, lineage&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0007" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c8" edge="1" parent="1" source="e_cls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="e_rev" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 178, 255), rgb(18, 18, 18));&quot;&gt;низкая уверенность → карантин&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0001" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c9" edge="1" parent="1" source="e_rev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="e_cls" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 178, 255), rgb(18, 18, 18));&quot;&gt;ручная разметка → дообучение&lt;/span&gt;">
+          <mxGeometry relative="1" x="-0.0557" y="25" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c10" edge="1" parent="1" source="a_dpo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;" target="e_rev" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 102, 255), rgb(18, 18, 18));&quot;&gt;разбор карантина&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" edge="1" parent="1" source="a_dpo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_cat" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;политики, теги&lt;/span&gt;">
+          <mxGeometry relative="1" x="0.0005" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c12" edge="1" parent="1" source="e_deid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_vlt" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 178, 255), rgb(18, 18, 18));&quot;&gt;ключи / токенизация&lt;/span&gt;">
+          <mxGeometry relative="1" x="0.0002" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c14" edge="1" parent="1" source="w_gd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_opa" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" edge="1" parent="1" source="w_rs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_aud" value="&lt;span style=&quot;background-color: light-dark(rgb(0, 0, 0), rgb(18, 18, 18));&quot;&gt;логи доступа к Restricted&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" edge="1" parent="1" source="w_rs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_vlt" value="ключи">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" edge="1" parent="1" source="w_gd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;fontSize=9;labelBackgroundColor=#FFFFFF;strokeColor=#5A5A5A;dashed=1;" target="p_dlp" value="&lt;span style=&quot;background-color: light-dark(rgb(102, 102, 255), rgb(18, 18, 18));&quot;&gt;контроль выгрузок&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
